@@ -1,8 +1,5 @@
-// src/components/TodoList.tsx
-import TodoItem from './TodoItem';
-import useTodoStore from '../store/useTodoStore';
-
-
+import TodoItem from "./TodoItem";
+import useTodoStore from "../store/useTodoStore";
 
 const TodoList = () => {
   const todos = useTodoStore((state) => state.todos);
