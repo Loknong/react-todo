@@ -8,7 +8,6 @@ const TodoForm: React.FC = () => {
     const [todo, setTodo] = useState("");
     const todos = useTodoStore((state) => state.todos);
     const addTodo = useTodoStore((state) => state.addTodo);
-    const toggleTodoStatus = useTodoStore((state) => state.toggleTodoStatus);
     const removeChecked = useTodoStore((state) => state.removeChecked);
 
     const handleAddTodo = () => {
@@ -24,7 +23,7 @@ const TodoForm: React.FC = () => {
         <div className="flex flex-col items-center my-4">
             <div className="font-black text-3xl text-gray-600">TODO LIST</div>
             <TodoInput todo={todo} onAddTodo={handleAddTodo} onSetTodo={setTodo} />
-            <TodoList todos={todos} onToggleTodoStatus={toggleTodoStatus} />
+            <TodoList/>
             <TodoControls todos={todos} onRemoveChecked={removeChecked} />
         </div>
     );
