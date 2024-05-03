@@ -10,7 +10,7 @@ interface TodoControlsProps {
 }
 
 const TodoControls: React.FC<TodoControlsProps> = ({ todos, onRemoveChecked }) => {
-  const completedCount = todos.filter(todo => todo.status).length;
+  const completedCount = todos.filter(todo => todo.status === true).length;
 
   return (
     <div className="flex flex-row justify-between items-center mt-4 w-5/6">
